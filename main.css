@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background-main-color:#f1f5f5;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:var(--background-main-color); 
+}
+
+.container{
+    display: flex;
+    width: 480px;
+    flex-direction: row;
+    margin: 180px auto;
+    justify-content: space-evenly;
+}
+/* Dots to be animated */
+.dot{
+    flex-basis: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 7px 3px 5px 1px rgb(224, 221, 221);
+    animation: dotdot 1.6s ease-in infinite both;
+}
+.dot:nth-child(2){
+    animation-delay: 0.4s;
+}
+.dot:nth-child(3){
+    animation-delay: 0.6s;
+}
+
+@keyframes dotdot{
+    0%{
+        opacity: 0.2;
+        transform: scale(0.3);
+        background: rgb(250, 246, 40);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(0.7);
+        background: rgb(238, 103, 250);
+    }
+    100%{
+        opacity: 0.2;
+        transform: scale(0.3);
+        background: rgb(68, 240, 52);
+    }
+}
